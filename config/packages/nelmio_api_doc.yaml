@@ -2,7 +2,7 @@ nelmio_api_doc:
     documentation:
         info:
             title: Books
-            description: Une API d'OpenClassrooms avec des livres, des autrices et des auteurs !
+            description: Best Library Around !
             version: 2.0.0
         paths:
             /api/login_check:
@@ -10,16 +10,16 @@ nelmio_api_doc:
                     tags:
                         - Token
                     operationId: postCredentialsItem
-                    summary: Permet d'obtenir le token JWT pour se logger.
+                    summary: Get JWT to log in.
                     requestBody:
-                        description: Crée un nouveau token JWT
+                        description: Create JWT
                         content:
                             application/json:
                                 schema:
                                     $ref: '#/components/schemas/Credentials'
                     responses:
                         '200':
-                            description: Récupère le token JWT
+                            description: Retrieve JWT
                             content:
                                 application/json:
                                     schema:
@@ -40,7 +40,7 @@ nelmio_api_doc:
                             default: admin@bookapi.com
                         password:
                             type: string
-                            default: password
+                            default: pass1234
             securitySchemes:
                 bearerAuth:            
                     type: apiKey
